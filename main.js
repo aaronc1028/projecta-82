@@ -30,12 +30,13 @@ function mouseMoveFN(e) {
         ctx.strokeStyle = color
         ctx.lineWidth = width
         ctx.moveTo(lastX, lastY)
-        ctx.lineTo(currentX, currentY)
+        ctx.arc(currentX, currentY,20,0,2*Math.PI)
         ctx.stroke()
     }
     lastX=currentX
     lastY=currentY
 }
+
 function clearcanvas(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
 }
